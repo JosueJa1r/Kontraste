@@ -226,7 +226,8 @@ section {
 /* --- HERO SECTION --- */
 .hero {
     padding: 0;
-    height: 100vh;
+    margin-top: var(--header-height);
+    height: calc(100vh - var(--header-height));
 }
 
 .slider {
@@ -248,7 +249,8 @@ section {
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
 /* --- PORTFOLIO SECTION --- */
@@ -307,9 +309,38 @@ section {
     text-align: center;
 }
 
+.about-box {
+    background-color: #282828;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    border: 1px solid #333;
+}
+
 .about-content p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+.mission-section {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--accent-color);
+}
+
+.mission-section h3 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.mission-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-color);
 }
 
 /* --- OUR WORK SECTION --- */
@@ -882,6 +913,22 @@ section:nth-child(even) {
 
     .contact-content > .logo {
         justify-self: center;
+    }
+
+    .about-box {
+        padding: 2rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    .mission-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .mission-section p {
+        font-size: 1rem;
     }
 
     .footer-content {

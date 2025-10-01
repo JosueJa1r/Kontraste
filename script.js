@@ -221,6 +221,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.getElementById(targetId);
             
             if (targetElement) {
+                // Remove section--hidden class to make section visible immediately
+                targetElement.classList.remove('section--hidden');
+                
                 const headerHeight = document.querySelector('.header').offsetHeight;
                 const targetPosition = targetElement.offsetTop - headerHeight - 20;
                 
@@ -238,6 +241,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
+    });
+
+    // --- HANDLE ANCHOR LINKS FROM OTHER PAGES ---
+    // Check if there's an anchor in the URL when page loads
+    window.addEventListener('load', function() {
+        const hash = window.location.hash;
+        if (hash) {
+            const targetElement = document.getElementById(hash.substring(1));
+            if (targetElement) {
+                // Remove section--hidden class to make section visible
+                targetElement.classList.remove('section--hidden');
+                
+                // Scroll to the section after a short delay to ensure page is loaded
+                setTimeout(() => {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }, 100);
+            }
+        }
     });
 
 });
