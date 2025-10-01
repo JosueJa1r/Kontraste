@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KONTRASTE - CONSTRUCCION</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#inicio" class="logo">
+                    <img src="IMG/b1e960c5-bcc5-465c-af15-df03d263d0ac.png" alt="Logo KONTRASTE">
+                    <div class="logo-text-wrapper">
+                        <span class="logo-text">KONTRASTE</span>
+                        <span class="logo-tagline">RESIDENCIAL COMERCIAL INDUSTRIAL</span>
+                    </div>
+                </a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="#inicio" class="nav-link active">INICIO</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#contacto" class="nav-link">CONTACTO</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">PORTAFOLIO <i class="fas fa-chevron-down nav-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="portafolio.html#residencial">RESIDENCIAL</a></li>
+                            <li><a href="portafolio.html#comercio">COMERCIO</a></li>
+                            <li><a href="portafolio.html#industria">INDUSTRIA</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="slider">
+            <div class="slide active"><img src="IMG/portada/img1.jpg" alt="Imagen de portada 1"></div>
+            <div class="slide"><img src="IMG/portada/img2.jpg" alt="Imagen de portada 2"></div>
+            <div class="slide"><img src="IMG/portada/img3.png" alt="Imagen de portada 3"></div>
+        </div>
+    </section>
+
+    <!-- Our Work Section -->
+    <section id="nuestro-trabajo" class="work section--hidden">
+        <div class="container">
+            <h2>Nuestro Trabajo</h2>
+            <div class="work-content">
+                <div class="work-image">
+                    <div class="mini-slider">
+                        <div class="mini-slide"><img src="muestra\muestra1.jpg" alt="Muestra de trabajo 1"></div>
+                        <div class="mini-slide"><img src="muestra\muestra2.jpg" alt="Muestra de trabajo 2"></div>
+                    </div>
+                </div>
+                <div class="work-description">
+                    <h3>Calidad y Compromiso</h3>
+                    <p>En cada proyecto, fusionamos diseño innovador con técnicas de construcción de vanguardia. Nuestro enfoque se centra en la atención al detalle, garantizando resultados que no solo cumplen, sino que superan las expectativas de nuestros clientes.</p>
+                    <p>Desde residencias de lujo hasta complejos comerciales, nuestro portafolio demuestra una versatilidad y un compromiso inquebrantable con la calidad y la durabilidad.</p>
+                    <a href="portafolio.html" class="btn-work">Ver más proyectos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact section--hidden">
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+525512345648">+52 (55) 1234-5648</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@kontraste.com">info@kontraste.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Ciudad de México, México</span>
+                    </div>
+                </div>
+                <a href="#inicio" class="logo">
+                    <img src="IMG/b1e960c5-bcc5-465c-af15-df03d263d0ac.png" alt="Logo KONTRASTE">
+                    <div class="logo-text-wrapper">
+                        <span class="logo-text">KONTRASTE</span>
+                        <span class="logo-tagline">RESIDENCIAL COMERCIAL INDUSTRIAL</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="#inicio" class="logo">
+                <img src="IMG/b1e960c5-bcc5-465c-af15-df03d263d0ac.png" alt="Logo KONTRASTE">
+                <div class="logo-text-wrapper">
+                    <span class="logo-text">KONTRASTE</span>
+                    <span class="logo-tagline">RESIDENCIAL COMERCIAL RESIDENCIAL</span>
+                </div>
+            </a>
+            <div class="social-links">
+                <a href="mailto:info@kontraste.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                <a href="tel:3313831791" class="social-link"><i class="fas fa-phone"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61581473316228&locale=es_LA" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a> <!-- Agrega aquí tu link de Instagram -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/3313831791" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

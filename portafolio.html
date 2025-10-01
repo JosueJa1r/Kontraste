@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KONTRASTE - CONSTRUCCION</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#inicio" class="logo">
+                    <img src="IMG/b1e960c5-bcc5-465c-af15-df03d263d0ac.png" alt="Logo KONTRASTE">
+                    <div class="logo-text-wrapper">
+                        <span class="logo-text">KONTRASTE</span>
+                        <span class="logo-tagline">RESIDENCIAL COMERCIAL INDUSTRIAL</span>
+                    </div>
+                </a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">INICIO</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="index.html#contacto" class="nav-link">CONTACTO</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">PORTAFOLIO <i class="fas fa-chevron-down nav-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#residencial">RESIDENCIAL</a></li>
+                            <li><a href="#comercio">COMERCIO</a></li>
+                            <li><a href="#industria">INDUSTRIA</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+
+        <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>PORTAFOLIO DE PROYECTOS</h1>
+                <p>Conoce nuestros trabajos realizados en diferentes sectores</p>
+            </div>
+        </section>
+
+
+        <!-- Residencial Section -->
+        <section id="residencial">
+            <div class="container">
+                <h2>PROYECTOS RESIDENCIALES</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="muestra/muestra1.jpg" alt="Proyecto Residencial 1" class="project-img" onclick="openImageModal(this)">
+                        </div>
+                        <div class="project-info">
+                            <h3>Proyecto Residencial</h3>
+                            <p>Descripción del proyecto residencial...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comercio Section -->
+        <section id="comercio">
+            <div class="container">
+                <h2>PROYECTOS COMERCIALES</h2>
+                <div class="projects-grid">
+                    <div class="project-card industria-card">
+                        <div class="project-image">
+                            <img src="catalogo/Industria1.jpg" alt="Bodega de Forrajes - Ocotlán, Jalisco" class="project-img" onclick="openImageModal(this)">
+                        </div>
+                        <div class="project-info">
+                            <h3>Bodega de Forrajes</h3>
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span><strong>Lugar:</strong> Ocotlán, Jalisco</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-ruler-combined"></i>
+                                    <span><strong>Metros cuadrados:</strong> 600 m² aprox.</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span><strong>Descripción:</strong> Construcción de bodega con trabajos de habilitado y montaje de estructura metálica, cubierta de lámina, muro perimetral y colado de piso con concreto armado en acabado pulido.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card industria-card">
+                        <div class="project-image">
+                            <img src="catalogo/comercio2.jpg" alt="Bodega en planta Farma - Tepatitlán, Jalisco" class="project-img" onclick="openImageModal(this)">
+                        </div>
+                        <div class="project-info">
+                            <h3>Bodega en planta Farma</h3>
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span><strong>Lugar:</strong> Tepatitlán, Jalisco</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-ruler-combined"></i>
+                                    <span><strong>Metros cuadrados:</strong> 1,200 m² aprox.</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span><strong>Descripción:</strong> Construcción de bodega en la que se realizó el habilitado y montaje de estructura metálica, se instaló lámina para cubierta y muros laterales y de fachada, trabajos de albañilerías para muro perimetral con ladrillo aparente, colado de concreto armado para piso y andenes, considerando también trabajos de instalaciones eléctricas, hidráulicas y sanitarias, y construcción de oficinas con tablaroca.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card industria-card">
+                        <div class="project-image">
+                            <div class="image-slider" id="comercio3-slider">
+                                <img src="catalogo/comercio3.jpg" alt="Bodega en parque industrial Avant - Tlajomulco de Zúñiga, Jalisco" class="project-img slider-img active" onclick="openImageModal(this)">
+                                <img src="catalogo/comercio3.1.jpg" alt="Bodega en parque industrial Avant - Tlajomulco de Zúñiga, Jalisco" class="project-img slider-img" onclick="openImageModal(this)">
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Bodega en parque industrial Avant</h3>
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span><strong>Lugar:</strong> Tlajomulco de Zúñiga, Jalisco</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-ruler-combined"></i>
+                                    <span><strong>Metros cuadrados:</strong> 1,000 m² aprox.</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span><strong>Descripción:</strong> Trabajos de terracerías para conformación de plataforma, habilitado y montaje de estructura metálica, instalación de lámina para muros y cubierta, instalaciones sanitarias, hidráulicas, pluviales y eléctricas, trabajos de albañilerías para muro perimetral y colado con concreto armado para piso, andenes y estacionamiento.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card industria-card">
+                        <div class="project-image">
+                            <div class="image-slider" id="comercio4-slider">
+                                <img src="catalogo/comercio4.jpg" alt="Remodelación de casa de cambio - Zapopan, Jalisco" class="project-img slider-img active" onclick="openImageModal(this)">
+                                <img src="catalogo/comercio4.1.jpg" alt="Remodelación de casa de cambio - Zapopan, Jalisco" class="project-img slider-img" onclick="openImageModal(this)">
+                                <img src="catalogo/comercio4.2.jpg" alt="Remodelación de casa de cambio - Zapopan, Jalisco" class="project-img slider-img" onclick="openImageModal(this)">
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Remodelación de casa de cambio</h3>
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span><strong>Lugar:</strong> Zapopan, Jalisco</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-ruler-combined"></i>
+                                    <span><strong>Metros cuadrados:</strong> 90 m²</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span><strong>Descripción:</strong> Demoliciones de muros tapón, pisos y acabados para posterior construcción de muros con tablaroca a dos caras, instalación de pisos y azulejos, así como trabajos de instalaciones, carpintería, aluminio, herrería y pintura.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industria Section -->
+        <section id="industria">
+            <div class="container">
+                <h2>PROYECTOS INDUSTRIALES</h2>
+                <div class="projects-grid">
+                    <div class="project-card industria-card">
+                        <div class="project-image">
+                            <img src="catalogo/Industria1.jpg" alt="Proyecto Industrial 1" class="project-img" onclick="openImageModal(this)">
+                        </div>
+                        <div class="project-info">
+                            <h3>Proyecto Industrial</h3>
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span><strong>Lugar:</strong> Por definir</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-ruler-combined"></i>
+                                    <span><strong>Metros cuadrados:</strong> Por definir</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span><strong>Descripción:</strong> Proyecto industrial en desarrollo.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card industria-card">
+                        <div class="project-image">
+                            <img src="catalogo/industria2.jpg" alt="Construcción de nave industrial - El Salto, Jalisco" class="project-img" onclick="openImageModal(this)">
+                        </div>
+                        <div class="project-info">
+                            <h3>Construcción de nave industrial</h3>
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span><strong>Lugar:</strong> El Salto, Jalisco</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-ruler-combined"></i>
+                                    <span><strong>Metros cuadrados:</strong> 2,000 m² aprox.</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span><strong>Descripción:</strong> Construcción de nave industrial considerando trabajos de terracerías para conformación de plataforma, habilitado y montaje de estructura metálica, instalación de cubierta de lámina, trabajos de albañilerías para muro perimetral y estacionamiento, colado de piso con concreto armado, así como lo correspondiente a instalaciones sanitarias, hidráulicas, pluviales y eléctricas.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card industria-card">
+                        <div class="project-image">
+                            <img src="catalogo/industria3.jpg" alt="Construcción de nave industrial - El Salto, Jalisco" class="project-img" onclick="openImageModal(this)">
+                        </div>
+                        <div class="project-info">
+                            <h3>Construcción de nave industrial</h3>
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span><strong>Lugar:</strong> El Salto, Jalisco</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-ruler-combined"></i>
+                                    <span><strong>Metros cuadrados:</strong> 2,000 m² aprox.</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span><strong>Descripción:</strong> Construcción de nave industrial considerando trabajos de terracerías para conformación de plataforma, habilitado y montaje de estructura metálica, instalación de cubierta de lámina, trabajos de albañilerías para muro perimetral y estacionamiento, colado de piso con concreto armado, así como lo correspondiente a instalaciones sanitarias, hidráulicas, pluviales y eléctricas.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="#inicio" class="logo">
+                <img src="IMG/b1e960c5-bcc5-465c-af15-df03d263d0ac.png" alt="Logo KONTRASTE">
+                <div class="logo-text-wrapper">
+                    <span class="logo-text">KONTRASTE</span>
+                    <span class="logo-tagline">RESIDENCIAL COMERCIAL RESIDENCIAL</span>
+                </div>
+            </a>
+            <div class="social-links">
+                <a href="mailto:info@kontraste.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                <a href="tel:3313831791" class="social-link"><i class="fas fa-phone"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61581473316228&locale=es_LA" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a> <!-- Agrega aquí tu link de Instagram -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeImageModal()">&times;</span>
+        <div class="modal-navigation">
+            <button class="nav-btn prev-btn" onclick="previousImage()" id="prevBtn">&#10094;</button>
+            <button class="nav-btn next-btn" onclick="nextImage()" id="nextBtn">&#10095;</button>
+        </div>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+        <div class="image-counter" id="imageCounter"></div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/3313831791" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
