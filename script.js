@@ -267,4 +267,44 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- HIDE FLOATING BUTTONS ON SCROLL TO BOTTOM ---
+    const whatsappButton = document.querySelector('.whatsapp-float');
+    const cliengoStaticMessage = document.querySelector('.cliengo-static-message');
+
+    const hideButtonsOnScroll = () => {
+        // Calcula si el usuario está cerca del final de la página
+        // document.documentElement.scrollHeight es la altura total del contenido
+        // window.innerHeight es la altura visible de la ventana
+        // window.scrollY es la posición actual del scroll
+        const isAtBottom = (window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 50); // -50px para un pequeño margen
+
+        if (whatsappButton) {
+            whatsappButton.classList.toggle('hide-on-bottom', isAtBottom);
+        }
+        if (cliengoStaticMessage) {
+            cliengoStaticMessage.classList.toggle('hide-on-bottom', isAtBottom);
+        }
+    };
+
+    // Ejecutar una vez al cargar la página por si ya está al final
+    hideButtonsOnScroll();
+
+    // Añadir el listener de scroll
+    window.addEventListener('scroll', hideButtonsOnScroll);
+
+    // --- TIMED VISIBILITY FOR CLIENGO MESSAGE ---
+    const setupCliengoMessageTiming = () => {
+        const cliengoMessage = document.querySelector('.cliengo-static-message');
+        if (!cliengoMessage) return;
+
+        const interval = 10000; // 10 segundos
+
+        const toggleMessage = () => {
+            cliengoMessage.classList.toggle('visible');
+        };
+
+        setInterval(toggleMessage, interval);
+    };
+
+    setupCliengoMessageTiming();
 });
