@@ -541,8 +541,8 @@ section {
     position: fixed;
     width: 60px;
     height: 60px;
-    bottom: 40px; /* Alineado verticalmente con el botón de Cliengo */
-    left: 30px;   /* Misma distancia horizontal que el botón de Cliengo */
+    bottom: 40px;
+    right: 30px; /* Posicionado en la esquina derecha */
     background-color: #25D366;
     color: #FFF;
     border-radius: 50px;
@@ -561,6 +561,26 @@ section {
 
 .whatsapp-float:hover {
     transform: scale(1.1);
+}
+
+/* --- MENSAJE ESTÁTICO PARA WHATSAPP --- */
+/* Este es un nuevo estilo para que aparezca un mensaje similar al de "Platica con nosotros" */
+.whatsapp-float::after {
+    content: 'Platica con nosotros';
+    position: absolute;
+    right: 80px; /* Aumenta el espacio entre el texto y el botón */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 20px;
+    white-space: nowrap;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    animation: float-bounce 2s ease-in-out infinite; /* Aplica la animación de flotar */
 }
 
 /* --- PORTFOLIO PAGE STYLES --- */
@@ -1008,22 +1028,11 @@ section:nth-child(even) {
         height: calc(100% - 20px);
     }
 
-    /* Ajuste para el mensaje de Cliengo en móvil */
-    .cliengo-static-message {
-        padding: 6px 10px; /* Reduce aún más el padding */
-        font-size: 12px;   /* Reduce aún más la fuente */
-        right: 90px;       /* Ajusta la posición horizontal */
-        bottom: 50px;      /* Re-alinea verticalmente */
+    /* Ocultar el mensaje de WhatsApp en móvil para no ocupar espacio */
+    .whatsapp-float::after {
+        display: none;
     }
 }
-
-/* --- AJUSTES PARA WIDGETS DE TERCEROS --- */
-/* Forzar la posición del botón de Cliengo para que quede debajo del de WhatsApp */
-#cliengo-chat-container {
-    bottom: 40px !important; /* Alineado con el botón de WhatsApp */
-    right: 30px !important;
-}
-
 /* Keyframes para el efecto de flotar/rebotar */
 @keyframes float-bounce {
     0% {
@@ -1043,35 +1052,4 @@ section:nth-child(even) {
     visibility: hidden;
     pointer-events: none; /* Para que no se puedan clickear cuando están ocultos */
     transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.cliengo-static-message {
-    position: fixed;
-    bottom: 50px; /* Alineado verticalmente con el centro del botón de Cliengo */
-    right: 100px; /* Posicionado a la izquierda del botón de Cliengo (30px + 60px de botón + 10px de espacio) */
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-    padding: 10px 20px;
-    border-radius: 20px; /* Bordes más redondeados para la burbuja */
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-    white-space: nowrap;
-    z-index: 99; /* Justo debajo de los botones flotantes principales */
-    opacity: 0; /* Oculto por defecto */
-    visibility: hidden;
-    transform: translateX(10px);
-    pointer-events: none; /* No interactuable cuando está oculto */
-    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0s 0.4s;
-}
-
-/* Clase para mostrar el mensaje */
-.cliengo-static-message.visible {
-    animation: float-bounce 2s ease-in-out infinite; /* Aplica la animación de flotar */
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
-    pointer-events: auto;
-    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0s;
 }
