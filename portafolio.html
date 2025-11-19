@@ -6,17 +6,35 @@
     <title>KONTRASTE - CONSTRUCCION</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <!-- Código de instalación Cliengo para ChatKontraste -->
-<script type="text/javascript">
-  (function () {
-    var ldk = document.createElement('script');
-    ldk.type = 'text/javascript';
-    ldk.async = true;
-    ldk.src = 'https://s.cliengo.com/weboptimizer/68e8100e91324e5fe3aeea05/68e8100e91324e5fe3aeea08.js?platform=onboarding_modular';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ldk, s);
-  })();
-</script>
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17628599840">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17628599840');
+</script>
+<!-- Event snippet for Contacto conversion page -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17628599840/QkLJCNnyvq8bEKCs_NVB',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -315,14 +333,10 @@
     </div>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/3313831791" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i>
+    <a href="https://wa.me/3313831791" onclick="return gtag_report_conversion('https://wa.me/3313831791');">
+        Contactar por Whats
     </a>
 
-    <!-- Mensaje estático para Cliengo -->
-    <div class="cliengo-static-message">
-        <span>Platica con nosotros</span>
-    </div>
 
     <script src="script.js"></script>
 </body>
